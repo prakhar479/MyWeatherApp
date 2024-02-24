@@ -1,7 +1,6 @@
-Certainly! Below is the README content in Markdown format:
 
-```markdown
-# Flutter Weather App
+
+# MY-WEATHER
 
 This Flutter project is a simple Android weather application that allows users to check the current weather conditions for a given location.
 
