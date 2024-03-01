@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, constant_identifier_names
 
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:my_weather/models/weather_model.dart';
@@ -23,15 +23,15 @@ class _WeatherPageState extends State<WeatherPage> {
     // get current city
     final String city = await _weatherService.getCurrentCity();
     try {
-      // get weather details
-      final weather = await _weatherService.getWeather(city);
-      setState(() {
-        _weather = weather;
+      _weatherService.getWeather(city).then((iweather) {
+        setState(() {
+          _weather = iweather;
+        });
+      }).catchError((error) {
+        debugPrint(error);
       });
     } catch (e) {
-      if (kDebugMode) {
-        print(e);
-      }
+      debugPrint(e.toString());
     }
   }
 
@@ -96,14 +96,12 @@ class _WeatherPageState extends State<WeatherPage> {
               ),
             ),
 
-
             // animation
             SizedBox(
               width: 300, // Replace with your desired width
               height: 300, // Replace with your desired height
               child: Lottie.asset(getWeatherAnimation(_weather?.mainCondition)),
             ),
-            
 
             // weather condition with styling
             Text(
