@@ -14,7 +14,7 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
-  static const String api_key = "API_KEY";
+  static const String api_key = "6079d92b36fa1333783691b4ad0c0425";
   final _weatherService = WeatherService(api_key);
   Weather? _weather;
 

@@ -32,8 +32,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-#  kotlin:
-#    bom: org.jetbrains.kotlin:kotlin-bom:1.9.0
 
 
   # The following adds the Cupertino Icons font to your application.

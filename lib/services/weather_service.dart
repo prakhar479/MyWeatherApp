@@ -9,7 +9,7 @@ import 'package:http/http.dart' as http;
 
 class WeatherService {
   static const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
-  final String api_key = "API_KEY";
+  final String api_key = "6079d92b36fa1333783691b4ad0c0425";
 
   WeatherService(api_key);
 
